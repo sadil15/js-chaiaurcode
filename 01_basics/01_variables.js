@@ -5,8 +5,19 @@ let accountPassword = "12345";
 let accountState;
 let temp = null;
 
+const id = Symbol("123");
+const anotherId = Symbol("123");
+
+const bigNum = 6551648494516216518n;
+
 console.table([accountId, accountPassword, accountState]);
 
 console.log(accountId, accountPassword);
 
 console.log(typeof(temp));
+
+console.log(typeof(id));
+console.log(id == anotherId);
+console.log(id === anotherId);
+
+console.log(typeof(bigNum));
