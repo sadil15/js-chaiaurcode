@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+    <style>
+        button{
+            cursor: pointer;
+        }
+
+        .sub-div{
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            border: 2px solid black;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <button>Click me!</button>
+        <a id="link" href="https://www.youtube.com/watch?v=_ALUMTa8BAE&t=116s" target="_blank">Chai aur Code</a>
+    </div>
+
+    <div class="s-div">
+        <div class="sub-div" id="one">1</div>
+        <div class="sub-div" id="two">2</div>
+        <div class="sub-div" id="three">3</div>
+        <div class="sub-div" id="four">4</div>
+    </div>
+
+    
+</body>
+
+<script>
+    // document.querySelector("button").addEventListener("click", function(e){
+    //     console.log("button was clicked");
+    //     e.stopPropagation();
+    // }, false);
+
+    // document.querySelector(".main-div").addEventListener("click", function(e){
+    //     console.log("div was clicked");
+    // }, false);
+
+    // document.querySelector("#link").addEventListener("click", function(e){
+    //     console.log("link clicked");
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // }, false);
+
+    const container = document.querySelector(".s-div");
+    container.addEventListener("click", function(e){
+        let removeIt = e.target;
+        removeIt.remove();
+    }, false);
+    
+</script>
+
+</html>
