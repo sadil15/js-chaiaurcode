@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and Chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+<script>
+    // function init(){
+    //     let name = "Mozilla";
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+
+    // init();
+
+    // function outer(){
+    //     let username = "adil";
+    //     function inner(){
+    //         let innerUsername = "hayat";
+    //         function extremeInner(){
+    //             console.log(username);
+    //             console.log(innerUsername);
+    //         }
+    //         extremeInner();
+    //     }
+    //     inner();
+    // }
+
+    // outer();
+
+
+
+    // function makeFun(){
+    //     const name = "Mozilla";
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFun();
+    // myFunc();
+
+</script>
+
+<script>
+
+    function clickHandler(color){
+        function innerHandler(){
+            document.body.style.backgroundColor = color;
+        }
+        return innerHandler;
+    }
+    
+    document.getElementById("orange").onclick = clickHandler("orange")
+    document.getElementById("green").onclick = clickHandler("green")
+</script>
+</html>
